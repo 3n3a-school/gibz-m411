@@ -1,0 +1,15 @@
+C:\Users\e\source\repos\ttt\bin\Debug\ttt.exe.config
+C:\Users\e\source\repos\ttt\bin\Debug\ttt.exe
+C:\Users\e\source\repos\ttt\bin\Debug\ttt.pdb
+C:\Users\e\source\repos\ttt\obj\Debug\ttt.csproj.AssemblyReference.cache
+C:\Users\e\source\repos\ttt\obj\Debug\MainWindow.g.cs
+C:\Users\e\source\repos\ttt\obj\Debug\App.g.cs
+C:\Users\e\source\repos\ttt\obj\Debug\ttt_MarkupCompile.cache
+C:\Users\e\source\repos\ttt\obj\Debug\ttt_MarkupCompile.lref
+C:\Users\e\source\repos\ttt\obj\Debug\MainWindow.baml
+C:\Users\e\source\repos\ttt\obj\Debug\ttt.g.resources
+C:\Users\e\source\repos\ttt\obj\Debug\ttt.Properties.Resources.resources
+C:\Users\e\source\repos\ttt\obj\Debug\ttt.csproj.GenerateResource.cache
+C:\Users\e\source\repos\ttt\obj\Debug\ttt.csproj.CoreCompileInputs.cache
+C:\Users\e\source\repos\ttt\obj\Debug\ttt.exe
+C:\Users\e\source\repos\ttt\obj\Debug\ttt.pdb
