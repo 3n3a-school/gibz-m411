@@ -53,11 +53,15 @@ void print_debug_array(int arr[3][3])
   }
 }
 
-void set_state_for_pos(int arr[3][3], const int position, const int state)
+int set_state_for_pos(int arr[3][3], const int position, const int state)
 {
   const int row = (position - 1) / 3;
   const int column = (position - 1) % 3;
-  arr[row][column] = state;
+  if (arr[row][column] == 0) {
+    arr[row][column] = state;
+    return 0;
+  }
+  return 1;
 }
 
 void init()
@@ -158,7 +162,8 @@ int main() {
     scanf_s("%i", &chosen_position);
     printf("\n");
 
-    set_state_for_pos(tic_tac_array, chosen_position, player);
+    const int winner = who_wins(tic_tac_array);
+    if (set_state_for_pos(tic_tac_array, chosen_position, player) == 1) goto continuation;
     positions_filled++;
 
     // Swap Player after every round
@@ -171,7 +176,6 @@ int main() {
       player = 1;
     }
 
-    const int winner = who_wins(tic_tac_array);
     if (positions_filled == 9)
     {      
       switch (winner)
@@ -195,7 +199,8 @@ int main() {
     case 2:
       display_winner(winner, tic_tac_array);
     }
-    
+
+  continuation:;
   } while (true);
   return 0;
 }
