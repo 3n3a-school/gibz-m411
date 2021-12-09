@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <Windows.h>
 
 void ConvertDecimal2Binary(unsigned long dec, unsigned char bin[], unsigned char* pLength);
 
@@ -30,6 +31,8 @@ int main()
     }
 
   }
+  printf("\n");
+  system("pause");
 }
 
 void ConvertDecimal2Binary(unsigned long dec, unsigned char bin[], unsigned char* pLength) {
