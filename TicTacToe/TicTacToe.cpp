@@ -3,7 +3,6 @@
 
 #include <cstdlib>
 #include <cstdio>
-#include <cstring>
 #include <windows.h>
 
 #define DEBUG false
@@ -162,8 +161,9 @@ int main() {
     scanf_s("%i", &chosen_position);
     printf("\n");
 
-    const int winner = who_wins(tic_tac_array);
-    if (set_state_for_pos(tic_tac_array, chosen_position, player) == 1) goto continuation;
+    
+    set_state_for_pos(tic_tac_array, chosen_position, player);
+    //if () == 1) goto continuation;
     positions_filled++;
 
     // Swap Player after every round
@@ -176,6 +176,7 @@ int main() {
       player = 1;
     }
 
+    const int winner = who_wins(tic_tac_array);
     if (positions_filled == 9)
     {      
       switch (winner)
@@ -200,7 +201,7 @@ int main() {
       display_winner(winner, tic_tac_array);
     }
 
-  continuation:;
+  //continuation:;
   } while (true);
   return 0;
 }
