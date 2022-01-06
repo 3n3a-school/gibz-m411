@@ -96,8 +96,30 @@ Contact AddContactMenu() {
   return new_c;
 }
 
+Contact* SearchContact(char name[], char surname[], Contact book[], int numEntries) {
+  Contact *foundContact = NULL;
+  int element = 0;
+
+  while (foundContact == NULL && element <= numEntries-1) {
+    if (
+      (strcmp(name, book[element].name) == 0) &&
+      (strcmp(surname, book[element].surname) == 0)
+    ) {
+      foundContact = &book[element];
+    }
+
+    element++;
+  }
+
+  return foundContact;
+};
+
 void printMenu() {
   printf("Options:\nPrint\t\t1\nAdd\t\t2\nSearch\t\t3\nExit\t\t0\n");
+}
+
+void clearScreen() {
+  printf("\e[1;1H\e[2J");
 }
 
 int main()
@@ -130,8 +152,8 @@ int main()
     };
 
     if (AddNewEntry(book, MAX_CONTACTS, &numberOfContacts, test) != EXIT_SUCCESS) {
-          	printf("Error adding Entry");
-          };
+      printf("Error adding Entry");
+    };
 
     while (option != 0){
       printMenu();
@@ -139,6 +161,7 @@ int main()
       scanf("%i", &option);
       printf("\n");
 
+      clearScreen();
       switch ((int)option) {
         case Print:
          PrintAdressbuch(book, numberOfContacts);
@@ -150,7 +173,19 @@ int main()
           };
         break;
         case Search:
-          //find_contact();
+	  char search_name[20], search_surname[20];
+          printf("Enter the Name: ");
+          scanf("%s", &search_name);
+	  printf("Enter the Surname: ");
+	  scanf("%s", &search_surname);
+	  printf("\n");
+          Contact *foundC = SearchContact(search_name, search_surname, book, numberOfContacts);
+          if (foundC == NULL) {
+	    printf("\n--- Contact not found ---\n\n");
+          } else {
+            printf("--- Found Contact ---\n");
+	    PrintContact(*foundC);
+	  }
         break;
         default:
           option = 0;

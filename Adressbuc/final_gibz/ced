@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nano $1.c && make $1 && ./$1
