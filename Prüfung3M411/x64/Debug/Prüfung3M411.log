@@ -1,0 +1,11 @@
+﻿  Prüfung3M411.cpp
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(111,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(138,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(173,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(219,10): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(219,10): message : this argument is used as a buffer size
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(222,10): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(222,10): message : this argument is used as a buffer size
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(225,27): warning C4474: 'scanf_s' : too many arguments passed for format string
+C:\Users\enea\source\repos\Prüfung3M411\Prüfung3M411.cpp(225,27): message : placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  Prüfung3M411.vcxproj -> C:\Users\enea\source\repos\Prüfung3M411\x64\Debug\Prüfung3M411.exe
